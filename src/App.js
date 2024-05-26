@@ -23,7 +23,9 @@ function App() {
       isInitial = false;
       return;
     }
-    dispatch(sendCartData(cart));
+    if (cart.change) {
+      dispatch(sendCartData(cart));
+    }
   }, [cart, dispatch]);
   return (
     <>
